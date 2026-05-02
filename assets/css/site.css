@@ -468,6 +468,7 @@ main { min-height: 70vh; }
   gap: 14px;
 }
 .gallery-grid figure {
+  grid-column: span 4;
   margin: 0;
   overflow: hidden;
   background: var(--paper);

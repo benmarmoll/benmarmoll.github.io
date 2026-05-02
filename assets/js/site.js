@@ -1,3 +1,36 @@
+
+function normalizeLinkTargets() {
+  const sitePages = new Set([
+    'index.html',
+    'schedule.html',
+    'travel.html',
+    'rsvp.html',
+    'registry.html',
+    'gallery.html',
+    'faq.html',
+    'details.html',
+    'Registry.html'
+  ]);
+
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const rawHref = link.getAttribute('href') || '';
+    if (rawHref.startsWith('#')) return;
+
+    const cleanHref = rawHref.split('#')[0].split('?')[0];
+    const isInternalPage = sitePages.has(cleanHref) || cleanHref.startsWith('./') || cleanHref.startsWith('/');
+
+    if (isInternalPage) {
+      link.removeAttribute('target');
+      link.removeAttribute('rel');
+    } else if (/^https?:\/\//i.test(rawHref)) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+}
+
+normalizeLinkTargets();
+
 const weddingDate = new Date('2026-10-10T16:30:00-04:00');
 
 function updateCountdown() {

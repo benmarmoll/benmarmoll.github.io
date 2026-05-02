@@ -218,16 +218,22 @@ a { color: inherit; }
 }
 
 .hero h1 {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0;
-  font-size: clamp(3.4rem, 8.2vw, 7.1rem);
+  font-size: clamp(2.75rem, 5.9vw, 5.15rem);
+}
+
+.name-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .ampersand {
   display: block;
+  width: fit-content;
   font-size: 0.48em;
   line-height: 0.9;
-  margin: 0.08em 0;
+  margin: 0.06em auto;
 }
 
 .hero-meta {
@@ -551,7 +557,7 @@ main { min-height: 70vh; }
       linear-gradient(180deg, rgba(251, 248, 239, 0.9), rgba(251, 248, 239, 0.66) 54%, rgba(51, 59, 32, 0.36)),
       linear-gradient(0deg, rgba(51, 59, 32, 0.5), rgba(51, 59, 32, 0.04));
   }
-  .hero h1 { font-size: clamp(2.35rem, 10.8vw, 3.75rem); max-width: 100%; }
+  .hero h1 { font-size: clamp(1.78rem, 7.8vw, 2.72rem); max-width: 100%; }
   .floating-dogs img { width: clamp(62px, 18vw, 128px); opacity: 0.72; }
   .floating-dogs img:nth-child(2),
   .floating-dogs img:nth-child(3),

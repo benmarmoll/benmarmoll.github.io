@@ -65,6 +65,7 @@ if (navToggle && primaryNav) {
 
 const audio = document.querySelector('[data-bg-music]');
 const musicButton = document.querySelector('[data-music-toggle]');
+const MAX_MUSIC_VOLUME = 0.65;
 
 async function tryPlayMusic(unmute = false) {
   if (!audio) return false;
@@ -80,7 +81,10 @@ async function tryPlayMusic(unmute = false) {
 }
 
 if (audio) {
-  audio.volume = 0.42;
+  audio.volume = MAX_MUSIC_VOLUME;
+  audio.addEventListener('volumechange', () => {
+    if (audio.volume > MAX_MUSIC_VOLUME) audio.volume = MAX_MUSIC_VOLUME;
+  });
   tryPlayMusic(false);
 
   const unlock = () => {

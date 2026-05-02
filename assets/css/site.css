@@ -578,7 +578,7 @@ main { min-height: 70vh; }
 
 .schedule-map {
   width: 100%;
-  max-width: 760px;
+  max-width: 610px;
   margin: 0 auto clamp(42px, 7vw, 76px);
   padding: clamp(8px, 1.4vw, 14px);
   background: rgba(255, 253, 247, 0.9);

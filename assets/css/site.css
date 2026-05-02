@@ -221,6 +221,7 @@ a { color: inherit; }
   max-width: 900px;
   margin: 0;
   font-size: clamp(2.75rem, 5.9vw, 5.15rem);
+  line-height: 1.04;
 }
 
 .name-line {
@@ -232,8 +233,8 @@ a { color: inherit; }
   display: block;
   width: fit-content;
   font-size: 0.48em;
-  line-height: 0.9;
-  margin: 0.06em auto;
+  line-height: 0.95;
+  margin: 0.16em 0;
 }
 
 .hero-meta {

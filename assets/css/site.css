@@ -194,7 +194,8 @@ a { color: inherit; }
   display: grid;
   align-content: center;
   min-height: calc(100svh - 74px);
-  padding: clamp(54px, 8vw, 110px) 0;
+  padding: clamp(36px, 6vw, 80px) 0 clamp(72px, 9vw, 120px);
+  transform: translateY(clamp(-72px, -5vw, -32px));
 }
 
 .kicker {
@@ -217,9 +218,9 @@ a { color: inherit; }
 }
 
 .hero h1 {
-  max-width: 620px;
+  max-width: 760px;
   margin: 0;
-  font-size: clamp(4.3rem, 12vw, 10rem);
+  font-size: clamp(3.4rem, 8.2vw, 7.1rem);
 }
 
 .ampersand {
@@ -539,13 +540,18 @@ main { min-height: 70vh; }
   }
   .primary-nav.open { display: flex; }
   .hero { min-height: calc(100svh - 64px); }
-  .hero-content { min-height: calc(100svh - 64px); max-width: 100%; width: min(100% - 32px, 560px); }
+  .hero-content {
+    min-height: calc(100svh - 64px);
+    max-width: 100%;
+    width: min(100% - 32px, 560px);
+    transform: translateY(clamp(-46px, -7vw, -22px));
+  }
   .hero::before {
     background:
       linear-gradient(180deg, rgba(251, 248, 239, 0.9), rgba(251, 248, 239, 0.66) 54%, rgba(51, 59, 32, 0.36)),
       linear-gradient(0deg, rgba(51, 59, 32, 0.5), rgba(51, 59, 32, 0.04));
   }
-  .hero h1 { font-size: clamp(2.75rem, 13.5vw, 4.25rem); max-width: 100%; }
+  .hero h1 { font-size: clamp(2.35rem, 10.8vw, 3.75rem); max-width: 100%; }
   .floating-dogs img { width: clamp(62px, 18vw, 128px); opacity: 0.72; }
   .floating-dogs img:nth-child(2),
   .floating-dogs img:nth-child(3),

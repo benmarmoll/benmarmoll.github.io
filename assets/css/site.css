@@ -507,6 +507,45 @@ main { min-height: 70vh; }
 }
 .placeholder-panel p { margin-left: auto; margin-right: auto; max-width: 690px; }
 
+.bitcoin-gift {
+  margin: 30px auto 0;
+  padding-top: 28px;
+  max-width: 560px;
+  border-top: 1px solid rgba(51, 59, 32, 0.14);
+}
+.bitcoin-qr {
+  display: block;
+  width: min(287px, 100%);
+  height: auto;
+  margin: 20px auto 16px;
+  padding: 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 34px rgba(51, 59, 32, 0.12);
+}
+.bitcoin-address {
+  display: grid;
+  gap: 8px;
+  color: var(--ink-soft);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.bitcoin-address code {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid rgba(51, 59, 32, 0.14);
+  border-radius: 8px;
+  background: rgba(51, 59, 32, 0.07);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  text-transform: none;
+}
+
 .site-footer {
   padding: 44px 18px 54px;
   text-align: center;
